@@ -1,6 +1,22 @@
 fn main() {
-    let x= 10;
-    let y: Option<u8> = None;
+   enum Coin {
+         Penny,
+         Nickel,
+         Dime,
+         Quarter,
+   }
 
-    let sum  = x + y.unwrap_or(0);
+    fn value_in_cents(coin: Coin) -> u32 {
+         match coin {
+              Coin::Penny => {
+                println!("Lucky penny!");
+                1
+              },
+              Coin::Nickel => 5,
+              Coin::Dime => 10,
+              Coin::Quarter => 25,
+         }
+    }
+
+    println!("{}", value_in_cents(Coin::Penny));
 }
