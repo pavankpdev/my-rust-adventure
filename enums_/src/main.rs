@@ -1,4 +1,6 @@
 fn main() {
-    let null_value: Option<u8> = None; // 8
+    let x= 10;
+    let y: Option<u8> = None;
 
+    let sum  = x + y.unwrap_or(0);
 }
